@@ -10,7 +10,6 @@ var wbtn=document.getElementById("wednesday");
 var thbtn=document.getElementById("thursday");
 var fbtn=document.getElementById("friday");
 var reset=document.getElementById("clear-button");
-var displaynum=document.getElementById("calculated-cost");
 var full=document.getElementById("full");
 var half=document.getElementById("half");
 var finalcost=0;
@@ -24,35 +23,35 @@ mbtn.addEventListener("click", event => {
         daycount+=1;
         calculate();
     }
-})
+});
 tbtn.addEventListener("click", event => {
     if (!tbtn.classList.contains("clicked")){
         event.target.classList.add("clicked");
         daycount+=1;
         calculate();
     }
-})
+});
 wbtn.addEventListener("click", event => {
     if (!wbtn.classList.contains("clicked")){
         event.target.classList.add("clicked");
         daycount+=1;
         calculate();
     }
-})
+});
 thbtn.addEventListener("click", event => {
     if (!thbtn.classList.contains("clicked")){
         event.target.classList.add("clicked");
         daycount+=1;
         calculate();
     }
-})
+});
 fbtn.addEventListener("click", event => {
     if (!fbtn.classList.contains("clicked")){
         event.target.classList.add("clicked");
         daycount+=1;
         calculate();
     }
-})
+});
 
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
@@ -64,7 +63,7 @@ reset.addEventListener("click", event => {
     fbtn.classList.remove("clicked");
     daycount=0;
     calculate();
-})
+});
 
 /********* change rate *********/
 // when the half-day button is clicked, set the daily rate to $20, add the "clicked" class to the "half" element, remove it from the "full" element, and recalculate the total cost.
@@ -74,7 +73,7 @@ full.addEventListener("click", event => {
         half.classList.remove("clicked");
         calculate();
     }
-})
+});
 
 // when the full-day button is clicked, the daily rate is set back to $35, the clicked class is added to "full" and removed from "half", and the total cost is recalculated.
 half.addEventListener("click", event => {
@@ -83,17 +82,17 @@ half.addEventListener("click", event => {
         full.classList.remove("clicked");
         calculate();
     }
-})
+});
 
 /********* calculate *********/
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
 function calculate() {
     if (full.classList.contains("clicked")){
-        daycost=35
+        daycost=35;
     } else {
-        daycost=20
-    };
+        daycost=20;
+    }
     finalcost=daycost*daycount;
-    document.getElementById("calculated-cost").innerText=finalcost
+    document.getElementById("calculated-cost").innerText=finalcost;
 }
