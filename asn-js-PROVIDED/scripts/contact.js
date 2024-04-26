@@ -2,5 +2,5 @@
 
 // hint: you can change the style of an element by modifying the value of that element's .style.fontSize, or by updating its .classList.
 document.getElementById("submit-button").addEventListener("click", event => {
-    document.getElementById("contact-page").innerHTML="<p style='font-size: 24px;'>Thank you for your message</p>"
+    document.getElementById("contact-page").innerHTML="<p style='font-size: 24px;'>Thank you for your message</p>";
 });
