@@ -59,7 +59,6 @@ h2 {
     line-height: 3;
     border: 1px solid black;
     text-align: center;
-    padding: 12px;
 }
 a {
     text-decoration: none;
@@ -220,7 +219,7 @@ footer {
 .contact textarea {
     height: 150px;
 }
-.contact input, label, textarea, .fake-button {
+.contact input,.contact  label,.contact  textarea,.contact .fake-button {
     font-family: 'Montserrat', sans-serif;
     line-height: 24px;
     font-size: 16px;
